@@ -11,8 +11,7 @@ addons:
     repo_token: REDACTED_USE_PRIVATE_CONFIGURATION
 
 install:
-  - rm composer.lock
-  - composer install
+  - composer update
   - php artisan env
   - mv -v .env.testing .env
 
