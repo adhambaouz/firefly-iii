@@ -18,3 +18,5 @@ after_script:
   - php vendor/bin/coveralls
   - CODECLIMATE_REPO_TOKEN=REDACTED_USE_PRIVATE_CONFIGURATION ./vendor/bin/test-reporter --stdout > codeclimate.json
   - "curl -X POST -d @codeclimate.json -H 'Content-Type: application/json' -H 'User-Agent: Code Climate (PHP Test Reporter v0.1.1)' https://codeclimate.com/test_reports"
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml
