@@ -12,3 +12,13 @@ yarn-error.log
 public/google*.html
 report.html
 composer.phar
+
+# Keep credentials and personal records out of Git.
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.pfx
+*.p12
+id_rsa
+id_ed25519
